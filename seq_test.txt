@@ -121,4 +121,23 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
     35         1          537    537.0      0.0          copied_blocks = [copy.copy(block) for block in blocks]
     36         1     45497577 45497577.0    100.0          schedule = self._make_schedule(copied_blocks)
     37         1            2      2.0      0.0          return schedule
+    
+ 
+ <strong>Alt-Az</strong>
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+   146                                               @profile
+   147                                               def altaz(self, time, target=None, obswl=None, grid=True):
+   148                                                  
+   149         1            2      2.0      0.1          if target is not None:
+   150                                                       time, target = self._preprocess_inputs(time, target, grid)
+   151                                           
+   152         1         3565   3565.0     99.9          altaz_frame = AltAz(location=self.location, obstime=time,pressure=self.pressure, obswl=obswl, temperature=self.temperature, relative_humidity=self.relative_humidity)
+   153         1            1      1.0      0.0          if target is None:
+   154                                                       # Return just the frame
+   155         1            0      0.0      0.0              return altaz_frame
+   156                                                   else:
+   157                                                       return target.transform_to(altaz_frame)
+
   
