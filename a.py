@@ -51,7 +51,8 @@ class Scheduler(object):
 class SequentialScheduler(Scheduler):
     def __init__(self, *args, **kwargs):
         super(SequentialScheduler, self).__init__(*args, **kwargs)
-
+    
+    @profile
     def _make_schedule(self, blocks):
         pre_filled = np.array([[block.start_time, block.end_time] for
                       block in self.schedule.scheduled_blocks])
