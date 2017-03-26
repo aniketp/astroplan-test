@@ -20,6 +20,8 @@ Total time: 37.6822 s
 File: seq_test.py
 Function: _make_schedule at line 55
 
+#### Sequential Scheduling
+
 Line #      Hits         Time  Per Hit   % Time  Line Contents
 ==============================================================
     55                                               @profile
@@ -104,7 +106,7 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
    134                                           
    135         1            1      1.0      0.0          return self.schedule
 
-
+#### Scheduler call
 
 Total time: 45.4981 s
 File: seq_test.py
@@ -123,7 +125,7 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
     37         1            2      2.0      0.0          return schedule
     
  
- <strong>Alt-Az</strong>
+#### Alt-Az
 
 Line #      Hits         Time  Per Hit   % Time  Line Contents
 ==============================================================
