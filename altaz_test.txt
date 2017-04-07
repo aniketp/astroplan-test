@@ -1,4 +1,4 @@
- Scheduler call
+Scheduler call
 
 Total time: 45.4981 s
 File: seq_test.py
